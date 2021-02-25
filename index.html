@@ -93,11 +93,83 @@
     <div class="paralax-wrap">
       <h1 class="paralax-heading">Zanima Vas više?</h1>
       <div class="button-center">
-        <a class="btn btn--white button-projects" href="existing_projects.html">Ekskluziva</a>
+        <a class="btn btn--white button-projects" href="exclusive.html">Ekskluziva</a>
       </div>
     </div>
   </section>
 
+  <section id="exclusive">
+    <div class="roww u-margin-top-small">
+      <div class="col-1-of-1">
+        <div class="content_usluge">
+          <div class="inception">
+          <h2 class="ponuda">Usluge koje pružamo</h2>
+          <p>Naša politika je da usluge prilagodimo svim korisnicima</p>
+
+        </div>
+        </div>
+        <div class="col-1-of-4 text-center text-usluge-p">
+          <div class="ikonica-usluge">
+            <img src="img/fire-extinguisher.png" alt="protivpozarni-aparat">
+          </div>
+          <h2>Tekuće održavanje</h2>
+          <p>
+            Zamena neispravnih sijalica, sijaličnih grla i prekidača, kao i provera protivpožarne opreme. 
+          </p>
+          <div class="box-accordion-main">
+            <button class="accordion-main is-open">prikaži više</button>
+            <div class="accordion-content-main">
+              <br>
+              <p>
+                Zamena neispravnih sijalica, sijaličnih grla i prekidača, kao i provera protivpožarne opreme u zajedničkim delovima zgrade i garaže. Zamena reflektora, plafonjera, senzorskog osvetljenja i ostalog materijala po potrebi, redovna kontrola i eventualno konstatovanje kvara elektroinstalacija zajedničke potrošnje, video ili audio interfona, video nadzora, kao i pregled ispravnosti i popravke poštanskih sandučića, mehanizma ulaznih vrata, brava, katanaca, farbanje klupa, manji molerski radovi i popravke i sl. 
+              </p>
+  
+              <br>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-1-of-4 text-center text-usluge-p">
+          <div class="ikonica-usluge">
+            <img src="img/warning.png" alt="protivpozarni-aparat">
+          </div>
+          <h2>Hitne intervencije</h2>
+          <p>
+            Intervencije na terenu 0/24h, po pozivu korisnika naših usluga. 
+          </p>
+        </div>
+        <div class="col-1-of-4 text-center text-usluge-p">
+          <div class="ikonica-usluge">
+            <img src="img/broom.png" alt="protivpozarni-aparat">
+          </div>
+          <h2>Održavanje higijene</h2>
+          <p>
+            Održavanje higijene Vašeg stambenog ili poslovnog objekta prema najvišim standardima. 
+          </p>
+        </div>
+        <div class="col-1-of-4 text-center text-usluge-p">
+          <div class="ikonica-usluge">
+            <img src="img/business.png" alt="protivpozarni-aparat">
+          </div>
+          <h2>Investicioni radovi</h2>
+          <p>
+            Vršimo sve vrste investicionih radova, potpisanim od strane Predsednika skupštine zgrade. 
+          </p>
+          <div class="box-accordion-main">
+            <button class="accordion-main is-open">prikaži više</button>
+            <div class="accordion-content-main">
+              <br>
+              <p>
+                Vršimo sve vrste investicionih radova, potpisanim od strane Predsednika skupštine zgrade. Investicioni radovi su poslovi koji iziskuju utrošak materijala, opreme i delova, kao i troškove rada, a izvode se u obimu i po uslovima datim posebnom ponudom o izvođenju investicionih radova i ugovora o izvođenju investicionih radova.
+              </p>
+  
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   
   <section class="section-form" id="contact">
     <div id='map'></div>
@@ -195,6 +267,24 @@
         });
       });
     });
+  </script>
+  <script>
+    var accordions = document.getElementsByClassName("accordion-main");
+
+for ( var i = 0; i < accordions.length; i++) {
+  accordions[i].onclick = function (){
+    this.classList.toggle('is-open');
+    var content = this.nextElementSibling;
+    
+    if (content.style.maxHeight){   
+      //otvara se     
+      content.style.maxHeight = null;
+    } else{
+      //zatvara se
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+}
   </script>
 </body>
 </html>
